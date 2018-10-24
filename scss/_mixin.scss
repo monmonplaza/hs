@@ -1,0 +1,20 @@
+@mixin clearfix {
+    &:after,
+    &:before {
+        content:'';
+        display: block;
+        clear: both; 
+    }
+}    
+
+@mixin media-query($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin media-query-min ($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
